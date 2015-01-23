@@ -1,0 +1,24 @@
+<div>
+    <h1>Add WR</h1>
+    <form novalidate class="simple-form">
+        <label>Player name: </label><input type="text" ng-model="record.player.name" value="" />
+        <label>Player profile: </label><input type="text" ng-model="record.player.profile" value="" />
+        <label>URL: </label><input type="text" ng-model="record.url" value="" />
+        <label>Game: </label><input type="text" ng-model="record.game" value="" />
+        <label>Category: </label><input type="text" ng-model="record.category" value="" />
+        <label>Played on: </label><input type="text" ng-model="record.support" value="" />
+        <label>Time: </label><input type="text" ng-model="record.time" value="" />
+        <input type="submit" ng-click="create(record)" />
+    </form>
+    <p class="preview">
+        <label>Preview: </label>
+        <span ng-bind-html="display(record)"></span>
+    </p>
+</div>
+
+<div>
+    <h1>Existing WR</h1>
+    <div>
+        <p ng-repeat="record in records"><span ng-bind-html="display(record)"></span></p>
+    </div>
+</div>
